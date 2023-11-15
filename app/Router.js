@@ -29,7 +29,7 @@ export async function Router() {
     $root.classList.add('hero-image-destination');
     cleanContainer($main);
     $main.appendChild(Loader());
-    await sleep(1);
+    await sleep(.8);
 
     await ajax({
       url: "./data.json",

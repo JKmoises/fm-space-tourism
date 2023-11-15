@@ -9,8 +9,8 @@ export function Destination(destination) {
   $destination.innerHTML = /*html*/`
     <div class="flex-1">
       <picture>
-        <source srcset="/app/${images.webp}" type="image/webp" loading="lazy">
-        <img class="w-4/5 mx-auto" src="/app/${images.png}" alt="${name}" loading="lazy" />
+        <source srcset="../app/${images.webp}" type="image/webp" loading="lazy">
+        <img class="w-4/5 mx-auto" src="../app/${images.png}" alt="${name}" loading="lazy" />
       </picture>
     </div>
 

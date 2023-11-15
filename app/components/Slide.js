@@ -29,7 +29,7 @@ export function Slide(crew) {
   $slideImage.classList.add('w-full','md:w-3/4', 'lg:w-2/4', 'lg:self-end', 'flex-1', 'lg:flex-initial');
   $slideImage.innerHTML = /*html*/`
     <picture>
-      <source srcset="/app/${images.webp}" type="image/webp" loading="lazy">
+      <source srcset="../app/${images.webp}" type="image/webp" loading="lazy">
       <img class="lg:w-4/5 mx-auto h-full lg:h-auto object-cover" src="/app/${images.png}" alt="${name}" loading="lazy" />
     </picture>
   `;
