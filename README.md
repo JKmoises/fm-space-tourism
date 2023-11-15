@@ -4,12 +4,13 @@
 
 ## Comandos:
 
-- ### Comando para compilar tailwind a CSS:
+### Comando para compilar tailwind a CSS:
 ```npm run tailwind```
 
+___
 
 ### Tecnologías utilizadas:
-- #### HTML
-- #### CSS
-- #### Javascript
-- #### TailwindCSS1
+- ##### HTML
+- ##### CSS
+- ##### Javascript
+- ##### TailwindCSS1
