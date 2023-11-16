@@ -1,3 +1,4 @@
+import { PATH_IMAGE } from "../helpers/utilityHelpers.js";
 
 export function Destination(destination) {
   const { name, images, description, distance, travel } = destination;
@@ -9,8 +10,8 @@ export function Destination(destination) {
   $destination.innerHTML = /*html*/`
     <div class="flex-1">
       <picture>
-        <source srcset="../app/${images.webp}" type="image/webp" loading="lazy">
-        <img class="w-4/5 mx-auto" src="../app/${images.png}" alt="${name}" loading="lazy" />
+        <source srcset="${PATH_IMAGE}/${images.webp}" type="image/webp" loading="lazy">
+        <img class="w-4/5 mx-auto" src="${PATH_IMAGE}/${images.png}" alt="${name}" loading="lazy" />
       </picture>
     </div>
 

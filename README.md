@@ -13,4 +13,4 @@ ___
 - ##### HTML
 - ##### CSS
 - ##### Javascript
-- ##### TailwindCSS1
+- ##### TailwindCSS
