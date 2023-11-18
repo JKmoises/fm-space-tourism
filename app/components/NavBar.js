@@ -1,4 +1,5 @@
 import { NavMenu } from "./NavMenu.js";
+import { PATH_IMAGE } from "../helpers/utilityHelpers.js";
 
 export function NavBar() {
   const $navBar = document.createElement("div");
@@ -35,7 +36,7 @@ export function NavBar() {
 
   const $closeIcon = document.createElement('img');
   $closeIcon.id = 'close-icon';
-  $closeIcon.src = '../app/assets/shared/icon-close.svg';
+  $closeIcon.src = `${PATH_IMAGE}/assets/shared/icon-close.svg`;
   $closeIcon.alt = 'close-icon';
   $closeIcon.classList.add('block', 'sm:hidden', 'p-4', 'cursor-pointer', 'ml-auto');
   

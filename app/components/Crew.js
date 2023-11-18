@@ -1,9 +1,10 @@
 import { Slides } from "./Slides.js";
 
 export function Crew(crews = []) {
+  
   const $section = document.createElement("section");
   $section.classList.add("relative", "h-full");
-
+  
   crews.forEach((_, i) => {
     const $inputRadio = document.createElement("input");
     $inputRadio.type = "radio";
@@ -19,6 +20,7 @@ export function Crew(crews = []) {
   $slidesNav.classList.add(
     "absolute",
     "top-64",
+    "min-[448px]:top-[12rem]",
     "sm:top-48",
     "lg:top-auto",
     "lg:bottom-20",

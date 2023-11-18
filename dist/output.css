@@ -1085,6 +1085,38 @@ a{
   background-color: #fff;
 }
 
+@media (min-width: 320px) {
+  .min-\[320px\]\:top-64 {
+    top: 16rem;
+  }
+
+  .min-\[320px\]\:top-44 {
+    top: 11rem;
+  }
+
+  .min-\[320px\]\:top-\[\] {
+    top: ;
+  }
+
+  .min-\[320px\]\:top-\[15rem\] {
+    top: 15rem;
+  }
+
+  .min-\[320px\]\:top-\[13rem\] {
+    top: 13rem;
+  }
+
+  .min-\[320px\]\:top-\[12rem\] {
+    top: 12rem;
+  }
+}
+
+@media (min-width: 448px) {
+  .min-\[448px\]\:top-\[12rem\] {
+    top: 12rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:visible {
     visibility: visible;
@@ -1092,6 +1124,10 @@ a{
 
   .sm\:static {
     position: static;
+  }
+
+  .sm\:top-44 {
+    top: 11rem;
   }
 
   .sm\:top-48 {

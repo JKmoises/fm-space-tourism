@@ -1,7 +1,7 @@
 import { Crew } from "../components/Crew.js";
 
 
-export function Crews(crews = []){
+export function Crews(crews = []) {
   const $crews = document.createElement('section');
   $crews.classList.add('flex', 'flex-col','max-w-screen-lg','overflow-hidden');
 
