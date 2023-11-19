@@ -42,12 +42,12 @@ export function openMenuMobile() {
     const target = e.target;
     if (target.matches("#hamburger-icon")) {
       $navbarContainer.classList.remove("opacity-0", "invisible");
-      $body.classList.add("overflow-hidden");
+      // $body.classList.add("overflow-hidden");
     }
     
     if (target.matches("#close-icon")) {
       $navbarContainer.classList.add("opacity-0", "invisible");
-      $body.classList.remove("overflow-hidden");
+      // $body.classList.remove("overflow-hidden");
     }
   });
 }
