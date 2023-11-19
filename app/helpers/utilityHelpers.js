@@ -16,8 +16,13 @@ const sleep = (seconds = 1) => {
   })
 }
 
+function replaceSpaceText(text = ""){
+  return text.toLocaleLowerCase().replace(" ","-");
+}
+
 export {
   PATH_IMAGE,
   cleanContainer,
   sleep,
+  replaceSpaceText,
 }

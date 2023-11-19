@@ -4,8 +4,9 @@ import { Crews } from "./pages/Crews.js";
 import { Loader } from "./components/Loader.js";
 
 import { ajax } from "./helpers/ajax.js";
-import { activeTab, hideTabSections } from "./helpers/menuHelpers.js";
+import { activeOptMenu, activeTab, hideTabSections } from "./helpers/menuHelpers.js";
 import { cleanContainer, sleep } from "./helpers/utilityHelpers.js";
+import { Technologies } from "./pages/Technologies.js";
 
 export async function Router() {
   const d = document;
@@ -45,7 +46,7 @@ export async function Router() {
     });
     
     
-    hideTabSections();
+    hideTabSections("destination");
     activeTab();
   }
   
@@ -56,16 +57,36 @@ export async function Router() {
       url: "./data.json",
       cbSuccess: (json) => {
         const crews = json.crew;
+        
         $main.appendChild(Crews(crews));
         $main.classList.add('items-stretch');
-
 
       }
     });
   }
   
-  if (hash === '#/technology') { 
+  if (hash.includes('#/technology')) { 
     $root.classList.add('hero-image-technology');
+    cleanContainer($main);
+    $main.appendChild(Loader());
+    await sleep(.8);
+
+    await ajax({
+      url: "./data.json",
+      cbSuccess: (json) => {
+        const technologies = json.technology;
+
+        $main.appendChild(Technologies(technologies));
+        $main.classList.add('items-stretch');
+
+        if (d.querySelector('#loader')) d.querySelector('#loader').classList.add('hidden');
+
+      }
+    });
+
+    activeOptMenu("technology","launch-vehicle");
+    hideTabSections("technology");
+    activeTab('circle-tabs', true);
   }
 
 

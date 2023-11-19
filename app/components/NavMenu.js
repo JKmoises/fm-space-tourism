@@ -13,7 +13,7 @@ const menuOptions = [
   },
   {
     name: "Technology",
-    url: "#/technology",
+    url: "#/technology/launch-vehicle",
   },
 ];
 

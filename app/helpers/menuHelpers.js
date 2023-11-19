@@ -1,9 +1,9 @@
-export function activeOptMenu() {
+export function activeOptMenu(optionMenu = "destination", defaultOption = "moon") {
   const $optionMenu = document.querySelector(
     `#navbar > a[href="${!location.hash
       ? "#/"
-      : location.hash.includes("#/destination")
-        ? "#/destination/moon"
+      : location.hash.includes(`#/${optionMenu}`)
+        ? `#/${optionMenu}/${defaultOption}`
         : location.hash
     }"]`
   );
@@ -12,17 +12,23 @@ export function activeOptMenu() {
   
 }
 
-export function activeTab() {
-  const $optionTab = document.querySelector(`#tabs > a[href="${location.hash}"]`);
+
+export function activeTab(id = "tabs",isCircleTab = false) {
+  const $optionTab = document.querySelector(`#${id} > a[href="${location.hash}"]`);
 
   if ($optionTab) $optionTab.classList.remove("sm:border-b-4", "border-b-transparent");
+
+  if ($optionTab && isCircleTab) {
+    $optionTab.classList.remove("text-white");
+    $optionTab.classList.add("bg-white", "text-custom-black");
+  }
 }
 
-export function hideTabSections() {
-  const $tabSections = document.querySelectorAll(".destination");
-  
+export function hideTabSections(sections = "") {
+  const $tabSections = document.querySelectorAll(`.${sections}`);
+
   $tabSections.forEach(($section) => {
-    if (!location.hash.includes($section.dataset.destination)) {
+    if (!location.hash.includes($section.dataset[sections])) {
       $section.classList.add("hidden");
     }
   });

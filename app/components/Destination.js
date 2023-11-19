@@ -4,7 +4,7 @@ export function Destination(destination) {
   const { name, images, description, distance, travel } = destination;
 
   const $destination = document.createElement('div');
-  $destination.classList.add(`destination`, 'flex', 'flex-col', 'lg:flex-row', 'items-center', 'gap-8', 'lg:gap-14');
+  $destination.classList.add('destination', 'flex', 'flex-col', 'lg:flex-row', 'items-center', 'gap-8', 'lg:gap-14');
   $destination.dataset.destination = `${name.toLocaleLowerCase()}`
 
   $destination.innerHTML = /*html*/`
